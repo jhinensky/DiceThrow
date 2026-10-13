@@ -67,11 +67,11 @@ class DieFragment : Fragment() {
     }
 
     companion object {
-        fun newInstance (sides: Int) = DieFragment()
-        .arguments?.apply {
-            Bundle().apply {
-                putInt(DIESIDE, sides)
+        fun newInstance (sides: Int) = DieFragment().apply{
+            arguments = Bundle().apply {
+                    putInt(DIESIDE, sides)
             }
-            }
+        }
     }
+
 }
